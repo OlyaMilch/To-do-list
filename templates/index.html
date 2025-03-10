@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <a href="{{ url_for('add_task') }}">Add New Task</a>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.id }}: {{ task.title }} - {% if task.completed %}✔{% else %}❌{% endif %}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

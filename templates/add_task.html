@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Add Task</h1>
+    <form action="{{ url_for('add_task') }}" method="POST">
+        <label for="title">Task Title</label>
+        <input type="text" id="title" name="title" required>
+        <button type="submit">Add</button>
+    </form>
+<!--    Creates a link that redirects the user to the home page (or task list).-->
+    <a href="{{ url_for('index') }}">Back to List</a>
+</body>
+</html>
